@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFE6F0">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="32sp"
+        android:text="0"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:padding="8dp">
+
+        <!-- Row 1 -->
+        <Button android:text="7" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="8" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="9" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="/" android:onClick="onOperator" style="@style/CalculatorButton.Operator" />
+
+        <!-- Row 2 -->
+        <Button android:text="4" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="5" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="6" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="*" android:onClick="onOperator" style="@style/CalculatorButton.Operator" />
+
+        <!-- Row 3 -->
+        <Button android:text="1" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="2" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="3" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="-" android:onClick="onOperator" style="@style/CalculatorButton.Operator" />
+
+        <!-- Row 4 -->
+        <Button android:text="0" android:onClick="onDigit" style="@style/CalculatorButton" />
+        <Button android:text="." android:onClick="onDecimalPoint" style="@style/CalculatorButton" />
+        <Button android:text="=" android:onClick="onEqual" style="@style/CalculatorButton.Equal" />
+        <Button android:text="+" android:onClick="onOperator" style="@style/CalculatorButton.Operator" />
+
+        <!-- Row 5 -->
+        <Button android:text="C" android:onClick="onClear" style="@style/CalculatorButton.Clear" />
+    </GridLayout>
+</LinearLayout>
